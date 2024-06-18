@@ -4,16 +4,24 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+      button {
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      }
+    </style>
 </head>
 <body>
   <div id="player" style="width: 800px; height: 600px;">
     <div class="js-video-container" style="width: 100%; height: 100%"></div>
     <div style="background-color: black;">
-      <button class="fa fa-play" style="border-style: none; cursor: pointer; color: white; background-color: transparent;" aria-hidden="true"></button>
-      <button class="js-pause-button" hidden>Pause</button>
-      <button class="js-volume-button">Volume</button>
-      <button class="js-mute-button" hidden>Mute</button>
-      <button class="js-fullscreen-button">Fullscreen</button>
+      <button class="fa fa-play" aria-hidden="true"></button>
+      <button class="fa fa-pause" aria-hidden="true"></button>
+      <button class="fa fa-volume-up" aria-hidden="true"></button>
+      <button class="fa fa-volume-off" aria-hidden="true"></button>
+      <button class="fa fa-arrows-alt" aria-hidden="true"></button>
     </div>
     <div style="color: white;">
       <span class="js-current-time"></span>
