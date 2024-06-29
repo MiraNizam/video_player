@@ -20,14 +20,21 @@
       }
 
       .control-panel {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       background-color: black;
+      }
+
+      .control-panel-empty-space{
+      display: flex;
+      flex-grow: 1;
       }
 
       .control-panel__button {
       width: 30px;
       height: 30px;
       font-size: 20px;
-      margin: 1px auto;
       border-style: none;
       cursor: pointer;
       color: white;
@@ -52,6 +59,7 @@
         <button class="js-mute-button control-panel__button" hidden>
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
+          <div class="control-panel-empty-space"></div>
         <button class="js-fullscreen-button control-panel__button">
           <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
