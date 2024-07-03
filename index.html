@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>VideoPlayer</title>
       <link rel="icon" href="Favicon.png" type="image/png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style type="text/css">
       .video-player {
       display: flex;
@@ -42,6 +45,15 @@
       background-color: transparent;
       }
 
+      .control-panel__time {
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      }
+
+
+
     </style>
 </head>
 <body>
@@ -60,11 +72,17 @@
         <button class="js-mute-button control-panel__button" hidden>
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
-          <div class="control-panel-empty-space"></div>
+        <span class="js-current-time control-panel__time"></span>
+        <div class="control-panel-empty-space"></div>
+        <span class="js-duration control-panel__time"></span>
         <button class="js-fullscreen-button control-panel__button">
           <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
-       </div>
+      </div>
+
+<!--      <div class="js-progress" style="background-color: grey;">-->
+<!--        <div class="js-progress-slider" style="background-color: red;">Прогресс</div>-->
+<!--      </div>-->
     </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
