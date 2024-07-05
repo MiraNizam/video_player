@@ -14,7 +14,7 @@
       flex-direction: column;
       width: 800px;
       height: 600px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+      box-shadow: 0 0 20px rgba(0,0,0,0.9);
       }
 
       .video-player-container {
@@ -59,13 +59,38 @@
       .viewing-panel__progressbar {
       display: flex;
       flex-grow: 1;
-      margin: 10px;
+      background-color: grey;
+      margin-top: 18px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      height: 5px;
+      align-items: center;
+      border-radius: 30px;
+      }
+
+      .progress-slider {
+      background-color: #f8104d;
+      height: 5px;
+      border-radius: 30px;
+      align-items: center;
       }
 
       .viewing-panel__duration {
       padding-top: 10px;
       }
 
+      .dot {
+      height: 8px;
+      width: 8px;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      background-color: #f8104d;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 3px rgba(0,0,0,0.9);
+      }
 
 
     </style>
@@ -92,16 +117,19 @@
             <span class="js-current-time"></span>
           </div>
           <div class="js-progress viewing-panel__progressbar">
-            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+            <div class="js-progress-slider progress-slider">
+              <span class="dot"></span>
+            </div>
           </div>
           <div class="viewing-panel__duration time-font">
             <span class="js-duration"></span>
           </div>
         </div>
-
         <button class="js-fullscreen-button control-panel__button">
           <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
+
+
       </div>
     </div>
 
