@@ -30,11 +30,6 @@
       background-color: black;
       }
 
-      .control-panel-empty-space{
-      display: flex;
-      flex-grow: 1;
-      }
-
       .control-panel__button {
       width: 37px;
       height: 40px;
@@ -45,11 +40,30 @@
       background-color: transparent;
       }
 
-      .control-panel__time {
+      .time-font {
       color: white;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
       font-style: normal;
+      }
+
+      .viewing-panel {
+      display: flex;
+      flex-grow: 1;
+      }
+
+      .viewing-panel__time {
+      padding-top: 10px;
+      }
+
+      .viewing-panel__progressbar {
+      display: flex;
+      flex-grow: 1;
+      margin: 10px;
+      }
+
+      .viewing-panel__duration {
+      padding-top: 10px;
       }
 
 
@@ -72,17 +86,23 @@
         <button class="js-mute-button control-panel__button" hidden>
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
-        <span class="js-current-time control-panel__time"></span>
-        <div class="control-panel-empty-space"></div>
-        <span class="js-duration control-panel__time"></span>
+
+        <div class="viewing-panel">
+          <div class="viewing-panel__time time-font">
+            <span class="js-current-time"></span>
+          </div>
+          <div class="js-progress viewing-panel__progressbar">
+            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+          </div>
+          <div class="viewing-panel__duration time-font">
+            <span class="js-duration"></span>
+          </div>
+        </div>
+
         <button class="js-fullscreen-button control-panel__button">
           <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
       </div>
-
-<!--      <div class="js-progress" style="background-color: grey;">-->
-<!--        <div class="js-progress-slider" style="background-color: red;">Прогресс</div>-->
-<!--      </div>-->
     </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
